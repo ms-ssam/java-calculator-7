@@ -6,16 +6,9 @@ import java.util.List;
 import java.util.Optional;
 
 public class AddCalculator {
-    private NumberExtractor numberExtractor;
 
-    public AddCalculator(NumberExtractor numberExtractor) {
-        this.numberExtractor = numberExtractor;
-    }
-
-    public Integer addNumbersInString(String input) {
-        List<Integer> numList = numberExtractor.extractNumber(input);
-        Integer result = numList.stream().reduce((a, b) -> a+b).orElse(0);
-
-        return result;
+    // 숫자 리스트를 받으면 다 더한 결과를 반환
+    public Integer addNumbers(List<Integer> numList) {
+        return numList.stream().reduce((a, b) -> a+b).orElse(0);
     }
 }

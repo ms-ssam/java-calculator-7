@@ -19,6 +19,7 @@ public class DelimiterAnalyzer {
         return delimiterList;
     }
 
+    // 기본 구분자 리스트 반환
     public List<String> getDefaultDelimiterList() {
         return new ArrayList<>(Arrays.asList(",", ":"));
     }

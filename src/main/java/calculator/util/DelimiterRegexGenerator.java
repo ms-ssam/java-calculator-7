@@ -5,14 +5,8 @@ import calculator.analyzer.DelimiterAnalyzer;
 import java.util.List;
 
 public class DelimiterRegexGenerator {
-    private DelimiterAnalyzer delimiterAnalyzer;
 
-    public DelimiterRegexGenerator(DelimiterAnalyzer delimiterAnalyzer) {
-        this.delimiterAnalyzer = delimiterAnalyzer;
-    }
-
-    public String generateDelimiterRegex(String input) {
-        List<String> delimiterList = delimiterAnalyzer.getDelimiterList(input);
+    public String generateDelimiterRegex(List<String> delimiterList) {
 
         // or 연결로 정규식 생성
         String delimiterRegex = "";
